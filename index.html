@@ -14,178 +14,220 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-            padding: 20px;
+            color: #e0e0e0;
+            background: #1a1a1a;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .sidebar {
+            width: 280px;
+            background: #0d0d0d;
+            border-right: 1px solid #2a2a2a;
+            overflow-y: auto;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
         }
         
-        .header {
-            text-align: center;
-            border-bottom: 3px solid #2196F3;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+        .sidebar-header {
+            padding: 30px 20px;
+            border-bottom: 2px solid #00c853;
+            background: #0a0a0a;
         }
         
-        h1 {
-            color: #2196F3;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .sidebar-header h1 {
+            color: #00c853;
+            font-size: 1.5em;
+            margin-bottom: 5px;
         }
         
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
+        .sidebar-header .subtitle {
+            color: #888;
+            font-size: 0.85em;
+        }
+        
+        .nav-menu {
+            padding: 20px 0;
+        }
+        
+        .nav-item {
+            display: block;
+            padding: 12px 20px;
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+            font-size: 0.95em;
+        }
+        
+        .nav-item:hover {
+            background: #1a1a1a;
+            color: #00c853;
+            border-left-color: #00c853;
+        }
+        
+        .nav-item.active {
+            background: #1a1a1a;
+            color: #00c853;
+            border-left-color: #00c853;
+            font-weight: 600;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            overflow-y: auto;
+            padding: 40px 60px;
+            max-width: 1200px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            scroll-margin-top: 20px;
         }
         
         h2 {
-            color: #1976D2;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #E3F2FD;
-            padding-bottom: 8px;
+            color: #00c853;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2a2a2a;
         }
         
         h3 {
-            color: #0D47A1;
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            color: #00e676;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
         
         .function {
-            background: #f8f9fa;
-            border-left: 4px solid #2196F3;
-            padding: 15px;
-            margin: 10px 0;
+            background: #0d0d0d;
+            border-left: 4px solid #00c853;
+            padding: 20px;
+            margin: 15px 0;
             border-radius: 4px;
         }
         
         .function-name {
             font-family: 'Courier New', monospace;
-            color: #C2185B;
+            color: #69f0ae;
             font-weight: bold;
             font-size: 1.1em;
+            margin-bottom: 10px;
         }
         
         .function-desc {
-            color: #555;
+            color: #b0b0b0;
             margin-top: 8px;
+            line-height: 1.5;
         }
         
         .params {
-            margin-top: 10px;
+            margin-top: 12px;
             padding-left: 20px;
+            line-height: 1.8;
         }
         
         .param {
             font-family: 'Courier New', monospace;
-            color: #6A1B9A;
-            background: #F3E5F5;
-            padding: 2px 6px;
+            color: #ffd54f;
+            background: #1a1a1a;
+            padding: 2px 8px;
             border-radius: 3px;
             font-size: 0.9em;
         }
         
         .returns {
-            margin-top: 8px;
+            margin-top: 10px;
             font-style: italic;
-            color: #1565C0;
+            color: #64b5f6;
         }
         
         .example {
-            background: #263238;
-            color: #AED581;
-            padding: 15px;
+            background: #0a0a0a;
+            color: #a5d6a7;
+            padding: 20px;
             border-radius: 4px;
-            margin: 15px 0;
+            margin: 20px 0;
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
             overflow-x: auto;
+            border: 1px solid #1a1a1a;
         }
         
         .example-title {
-            color: #FFB74D;
+            color: #00c853;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            font-family: 'Segoe UI', sans-serif;
         }
         
         .note {
-            background: #FFF3E0;
-            border-left: 4px solid #FF9800;
-            padding: 12px;
-            margin: 15px 0;
+            background: #1a1a1a;
+            border-left: 4px solid #ffa726;
+            padding: 15px;
+            margin: 20px 0;
             border-radius: 4px;
         }
         
         .note-title {
             font-weight: bold;
-            color: #E65100;
-            margin-bottom: 5px;
-        }
-        
-        .toc {
-            background: #E3F2FD;
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 30px;
-        }
-        
-        .toc h3 {
-            margin-top: 0;
-        }
-        
-        .toc ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-        
-        .toc li {
-            margin: 8px 0;
-        }
-        
-        .toc a {
-            color: #1976D2;
-            text-decoration: none;
-        }
-        
-        .toc a:hover {
-            text-decoration: underline;
+            color: #ffa726;
+            margin-bottom: 8px;
         }
         
         .print-button {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: #2196F3;
-            color: white;
+            background: #00c853;
+            color: #000;
             border: none;
             padding: 12px 24px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 1em;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 200, 83, 0.3);
+            z-index: 1000;
         }
         
         .print-button:hover {
-            background: #1976D2;
+            background: #00e676;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0d0d0d;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a3a3a;
         }
         
         @media print {
             body {
+                display: block;
                 background: white;
-                padding: 0;
+                color: black;
             }
-            .container {
-                box-shadow: none;
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
                 padding: 20px;
             }
             .print-button {
@@ -195,174 +237,214 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>tLua Modding API</h1>
-            <div class="subtitle">Modding doc for tLua (or TABMM Lua)</div>
+    <button class="print-button" onclick="window.print()">Save as PDF</button>
+    
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>Lua Modding API</h1>
+            <div class="subtitle">Unity VR Reference Guide</div>
         </div>
-        
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#input">VR Input System</a></li>
-                <li><a href="#gameobject">GameObject Management</a></li>
-                <li><a href="#triggers">Triggers & Collisions</a></li>
-                <li><a href="#physics">Physics & Raycasting</a></li>
-                <li><a href="#vectors">Vectors & Math</a></li>
-                <li><a href="#time">Time & Coroutines</a></li>
-                <li><a href="#networking">Networking (Photon)</a></li>
-                <li><a href="#examples">Complete Examples</a></li>
-            </ul>
+        <div class="nav-menu">
+            <a href="#input" class="nav-item">VR Input System</a>
+            <a href="#gameobject" class="nav-item">GameObject Management</a>
+            <a href="#triggers" class="nav-item">Triggers & Collisions</a>
+            <a href="#physics" class="nav-item">Physics & Raycasting</a>
+            <a href="#vectors" class="nav-item">Vectors & Math</a>
+            <a href="#time" class="nav-item">Time & Coroutines</a>
+            <a href="#networking" class="nav-item">Networking</a>
+            <a href="#audio" class="nav-item">Audio</a>
+            <a href="#lighting" class="nav-item">Lighting</a>
+            <a href="#particles" class="nav-item">Particles</a>
+            <a href="#examples" class="nav-item">Complete Examples</a>
         </div>
+    </nav>
 
-        <h2 id="input">VR Input System</h2>
-        
-        <div class="note">
-            <div class="note-title">Hand Parameter</div>
-            All input functions that require a hand use: <span class="param">Enum.Hand.Left</span> or <span class="param">Enum.Hand.Right</span>
-        </div>
-
-        <h3>Grip & Trigger</h3>
-        
-        <div class="function">
-            <div class="function-name">Input.GetGripButtonDown(hand)</div>
-            <div class="function-desc">Returns true if the grip button is pressed</div>
-            <div class="params">
-                <span class="param">hand</span> - Enum.Hand.Left or Enum.Hand.Right
+    <main class="main-content">
+        <section id="input" class="section">
+            <h2>VR Input System (EasyInputs)</h2>
+            
+            <div class="note">
+                <div class="note-title">Hand Parameter</div>
+                All input functions that require a hand use: <span class="param">Enum.Hand.Left</span> or <span class="param">Enum.Hand.Right</span>
             </div>
-            <div class="returns">Returns: boolean</div>
-        </div>
 
-        <div class="function">
-            <div class="function-name">Input.GetGripButtonFloat(hand)</div>
-            <div class="function-desc">Returns analog grip value (useful for grip strength)</div>
-            <div class="returns">Returns: float (0.0 to 1.0)</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.LeftGrip() / Input.RightGrip()</div>
-            <div class="function-desc">Convenience shortcuts for grip values</div>
-            <div class="returns">Returns: float (0.0 to 1.0)</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetTriggerButtonDown(hand)</div>
-            <div class="function-desc">Returns true if trigger button is pressed</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetTriggerButtonFloat(hand)</div>
-            <div class="function-desc">Returns analog trigger value</div>
-            <div class="returns">Returns: float (0.0 to 1.0)</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetTriggerButtonTouched(hand)</div>
-            <div class="function-desc">Returns true if trigger is being touched (Quest only)</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.LeftTrigger() / Input.RightTrigger()</div>
-            <div class="function-desc">Convenience shortcuts for trigger values</div>
-            <div class="returns">Returns: float (0.0 to 1.0)</div>
-        </div>
-
-        <h3>Face Buttons (A, B, X, Y)</h3>
-        
-        <div class="function">
-            <div class="function-name">Input.GetPrimaryButtonDown(hand)</div>
-            <div class="function-desc">A button (right hand) or X button (left hand)</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetSecondaryButtonDown(hand)</div>
-            <div class="function-desc">B button (right hand) or Y button (left hand)</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.AButton() / Input.BButton()</div>
-            <div class="function-desc">Right controller buttons (A and B)</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.XButton() / Input.YButton()</div>
-            <div class="function-desc">Left controller buttons (X and Y)</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetPrimaryButtonTouched(hand)</div>
-            <div class="function-desc">Returns true if primary button is being touched</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetSecondaryButtonTouched(hand)</div>
-            <div class="function-desc">Returns true if secondary button is being touched</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <h3>Thumbstick</h3>
-        
-        <div class="function">
-            <div class="function-name">Input.GetThumbStick2DAxis(hand)</div>
-            <div class="function-desc">Get thumbstick position as Vector2 (for movement/turning)</div>
-            <div class="returns">Returns: Vector2 (x: -1 to 1, y: -1 to 1)</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.LeftStick() / Input.RightStick()</div>
-            <div class="function-desc">Convenience shortcuts for thumbstick values</div>
-            <div class="returns">Returns: Vector2</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetThumbStickButtonDown(hand)</div>
-            <div class="function-desc">Returns true if thumbstick is clicked down</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">Input.GetThumbStickButtonTouched(hand)</div>
-            <div class="function-desc">Returns true if thumbstick is being touched</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <h3>Menu & System</h3>
-        
-        <div class="function">
-            <div class="function-name">Input.GetMenuButtonDown(hand)</div>
-            <div class="function-desc">Returns true if menu button is pressed</div>
-            <div class="returns">Returns: boolean</div>
-        </div>
-
-        <h3>Device Tracking</h3>
-        
-        <div class="function">
-            <div class="function-name">Input.GetDeviceVelocity(hand)</div>
-            <div class="function-desc">Get controller velocity (useful for swing detection)</div>
-            <div class="returns">Returns: Vector3</div>
-        </div>
-
-        <h3>Haptics</h3>
-        
-        <div class="function">
-            <div class="function-name">Input.Vibrate(hand, amplitude, duration)</div>
-            <div class="function-desc">Trigger haptic feedback on controller</div>
-            <div class="params">
-                <span class="param">hand</span> - Which controller<br>
-                <span class="param">amplitude</span> - Vibration strength (0.0 to 1.0)<br>
-                <span class="param">duration</span> - Duration in seconds
+            <h3>Grip & Trigger</h3>
+            
+            <div class="function">
+                <div class="function-name">Input.GetGripButtonDown(hand)</div>
+                <div class="function-desc">Returns true if the grip button is pressed</div>
+                <div class="params">
+                    <span class="param">hand</span> - Enum.Hand.Left or Enum.Hand.Right
+                </div>
+                <div class="returns">Returns: boolean</div>
             </div>
-        </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: VR Input Usage</div>
+            <div class="function">
+                <div class="function-name">Input.GetGripButtonFloat(hand)</div>
+                <div class="function-desc">Returns analog grip value (useful for grip strength)</div>
+                <div class="returns">Returns: float (0.0 to 1.0)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.LeftGrip() / Input.RightGrip()</div>
+                <div class="function-desc">Convenience shortcuts for grip values</div>
+                <div class="returns">Returns: float (0.0 to 1.0)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetTriggerButtonDown(hand)</div>
+                <div class="function-desc">Returns true if trigger button is pressed</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetTriggerButtonFloat(hand)</div>
+                <div class="function-desc">Returns analog trigger value</div>
+                <div class="returns">Returns: float (0.0 to 1.0)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetTriggerButtonTouched(hand)</div>
+                <div class="function-desc">Returns true if trigger is being touched (Quest only)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.LeftTrigger() / Input.RightTrigger()</div>
+                <div class="function-desc">Convenience shortcuts for trigger values</div>
+                <div class="returns">Returns: float (0.0 to 1.0)</div>
+            </div>
+
+            <h3>Face Buttons (A, B, X, Y)</h3>
+            
+            <div class="function">
+                <div class="function-name">Input.GetPrimaryButtonDown(hand)</div>
+                <div class="function-desc">A button (right hand) or X button (left hand)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetSecondaryButtonDown(hand)</div>
+                <div class="function-desc">B button (right hand) or Y button (left hand)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.AButton() / Input.BButton()</div>
+                <div class="function-desc">Right controller buttons (A and B)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.XButton() / Input.YButton()</div>
+                <div class="function-desc">Left controller buttons (X and Y)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetPrimaryButtonTouched(hand)</div>
+                <div class="function-desc">Returns true if primary button is being touched</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetSecondaryButtonTouched(hand)</div>
+                <div class="function-desc">Returns true if secondary button is being touched</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <h3>Thumbstick</h3>
+            
+            <div class="function">
+                <div class="function-name">Input.GetThumbStick2DAxis(hand)</div>
+                <div class="function-desc">Get thumbstick position as Vector2 (for movement/turning)</div>
+                <div class="returns">Returns: Vector2 (x: -1 to 1, y: -1 to 1)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.LeftStick() / Input.RightStick()</div>
+                <div class="function-desc">Convenience shortcuts for thumbstick values</div>
+                <div class="returns">Returns: Vector2</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetThumbStickButtonDown(hand)</div>
+                <div class="function-desc">Returns true if thumbstick is clicked down</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.GetThumbStickButtonTouched(hand)</div>
+                <div class="function-desc">Returns true if thumbstick is being touched</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <h3>Menu & System</h3>
+            
+            <div class="function">
+                <div class="function-name">Input.GetMenuButtonDown(hand)</div>
+                <div class="function-desc">Returns true if menu button is pressed</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <h3>Device Tracking</h3>
+            
+            <div class="function">
+                <div class="function-name">Input.GetDeviceVelocity(hand)</div>
+                <div class="function-desc">Get controller velocity (useful for swing detection)</div>
+                <div class="returns">Returns: Vector3</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.LeftControllerPosition()</div>
+                <div class="function-desc">Get left controller world position</div>
+                <div class="returns">Returns: Vector3</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.RightControllerPosition()</div>
+                <div class="function-desc">Get right controller world position</div>
+                <div class="returns">Returns: Vector3</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.LeftControllerRotation()</div>
+                <div class="function-desc">Get left controller rotation</div>
+                <div class="returns">Returns: Quaternion</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.RightControllerRotation()</div>
+                <div class="function-desc">Get right controller rotation</div>
+                <div class="returns">Returns: Quaternion</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.HeadsetPosition()</div>
+                <div class="function-desc">Get VR headset position</div>
+                <div class="returns">Returns: Vector3</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">Input.HeadsetRotation()</div>
+                <div class="function-desc">Get VR headset rotation</div>
+                <div class="returns">Returns: Quaternion</div>
+            </div>
+
+            <h3>Haptics</h3>
+            
+            <div class="function">
+                <div class="function-name">Input.Vibrate(hand, amplitude, duration)</div>
+                <div class="function-desc">Trigger haptic feedback on controller</div>
+                <div class="params">
+                    <span class="param">hand</span> - Which controller<br>
+                    <span class="param">amplitude</span> - Vibration strength (0.0 to 1.0)<br>
+                    <span class="param">duration</span> - Duration in seconds
+                </div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: VR Input Usage</div>
 -- Check if right trigger is pulled<br>
 if Input.RightTrigger() > 0.5 then<br>
 &nbsp;&nbsp;print("Trigger pulled!")<br>
@@ -383,61 +465,63 @@ local velocity = Input.GetDeviceVelocity(Enum.Hand.Right)<br>
 if velocity.magnitude > 2.0 then<br>
 &nbsp;&nbsp;print("Fast swing detected!")<br>
 end
-        </div>
-
-        <h2 id="gameobject">🎯 GameObject Management</h2>
-        
-        <div class="function">
-            <div class="function-name">GameObject.New(name)</div>
-            <div class="function-desc">Create a new empty GameObject</div>
-            <div class="params"><span class="param">name</span> - GameObject name</div>
-            <div class="returns">Returns: GameObject</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">GameObject.Find(name)</div>
-            <div class="function-desc">Find a GameObject by name in the scene</div>
-            <div class="returns">Returns: GameObject or nil</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">GameObject.FindWithTag(tag)</div>
-            <div class="function-desc">Find first GameObject with specified tag</div>
-            <div class="returns">Returns: GameObject or nil</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">GameObject.FindGameObjectsWithTag(tag)</div>
-            <div class="function-desc">Find all GameObjects with specified tag</div>
-            <div class="returns">Returns: GameObject array</div>
-        </div>
-
-        <div class="function">
-            <div class="function-name">GameObject.CreatePrimitive(type)</div>
-            <div class="function-desc">Create a primitive shape</div>
-            <div class="params">
-                <span class="param">type</span> - Enum.Primitive.Sphere, Cube, Cylinder, Capsule, Plane, Quad
             </div>
-            <div class="returns">Returns: GameObject</div>
-        </div>
+        </section>
 
-        <div class="function">
-            <div class="function-name">GameObject.Destroy(obj)</div>
-            <div class="function-desc">Destroy a GameObject (happens at end of frame)</div>
-        </div>
+        <section id="gameobject" class="section">
+            <h2>GameObject Management</h2>
+            
+            <div class="function">
+                <div class="function-name">GameObject.New(name)</div>
+                <div class="function-desc">Create a new empty GameObject</div>
+                <div class="params"><span class="param">name</span> - GameObject name</div>
+                <div class="returns">Returns: GameObject</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">GameObject.DestroyImmediate(obj)</div>
-            <div class="function-desc">Destroy a GameObject immediately</div>
-        </div>
+            <div class="function">
+                <div class="function-name">GameObject.Find(name)</div>
+                <div class="function-desc">Find a GameObject by name in the scene</div>
+                <div class="returns">Returns: GameObject or nil</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">GameObject.DontDestroyOnLoad(obj)</div>
-            <div class="function-desc">Keep GameObject alive between scene loads</div>
-        </div>
+            <div class="function">
+                <div class="function-name">GameObject.FindWithTag(tag)</div>
+                <div class="function-desc">Find first GameObject with specified tag</div>
+                <div class="returns">Returns: GameObject or nil</div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Creating Objects</div>
+            <div class="function">
+                <div class="function-name">GameObject.FindGameObjectsWithTag(tag)</div>
+                <div class="function-desc">Find all GameObjects with specified tag</div>
+                <div class="returns">Returns: GameObject array</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">GameObject.CreatePrimitive(type)</div>
+                <div class="function-desc">Create a primitive shape</div>
+                <div class="params">
+                    <span class="param">type</span> - Enum.Primitive.Sphere, Cube, Cylinder, Capsule, Plane, Quad
+                </div>
+                <div class="returns">Returns: GameObject</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">GameObject.Destroy(obj)</div>
+                <div class="function-desc">Destroy a GameObject (happens at end of frame)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">GameObject.DestroyImmediate(obj)</div>
+                <div class="function-desc">Destroy a GameObject immediately</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">GameObject.DontDestroyOnLoad(obj)</div>
+                <div class="function-desc">Keep GameObject alive between scene loads</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Creating Objects</div>
 -- Create a sphere<br>
 local sphere = GameObject.CreatePrimitive(Enum.Primitive.Sphere)<br>
 sphere.transform.position = Vector3.New(0, 2, 5)<br>
@@ -452,69 +536,71 @@ end<br>
 -- Find all enemies<br>
 local enemies = GameObject.FindGameObjectsWithTag("Enemy")<br>
 print("Found " .. #enemies .. " enemies")
-        </div>
+            </div>
+        </section>
 
-        <h2 id="triggers">Triggers & Collisions</h2>
-        
-        <h3>Trigger System</h3>
-        
-        <div class="function">
-            <div class="function-name">Trigger.Add(gameObject)</div>
-            <div class="function-desc">Add trigger component to GameObject (auto-adds collider as trigger)</div>
-            <div class="returns">Returns: LuaTrigger component</div>
-        </div>
+        <section id="triggers" class="section">
+            <h2>Triggers & Collisions</h2>
+            
+            <h3>Trigger System</h3>
+            
+            <div class="function">
+                <div class="function-name">Trigger.Add(gameObject)</div>
+                <div class="function-desc">Add trigger component to GameObject (auto-adds collider as trigger)</div>
+                <div class="returns">Returns: LuaTrigger component</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Trigger.SetTag(trigger, tag)</div>
-            <div class="function-desc">Filter triggers to only detect specific tag</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Trigger.SetTag(trigger, tag)</div>
+                <div class="function-desc">Filter triggers to only detect specific tag</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Trigger.OnEnter(trigger, callback)</div>
-            <div class="function-desc">Set callback when something enters trigger</div>
-            <div class="params"><span class="param">callback</span> - function(otherGameObject)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Trigger.OnEnter(trigger, callback)</div>
+                <div class="function-desc">Set callback when something enters trigger</div>
+                <div class="params"><span class="param">callback</span> - function(otherGameObject)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Trigger.OnExit(trigger, callback)</div>
-            <div class="function-desc">Set callback when something exits trigger</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Trigger.OnExit(trigger, callback)</div>
+                <div class="function-desc">Set callback when something exits trigger</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Trigger.OnStay(trigger, callback)</div>
-            <div class="function-desc">Set callback while something stays in trigger (called every frame)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Trigger.OnStay(trigger, callback)</div>
+                <div class="function-desc">Set callback while something stays in trigger (called every frame)</div>
+            </div>
 
-        <h3>Collision System</h3>
-        
-        <div class="function">
-            <div class="function-name">Collision.Add(gameObject)</div>
-            <div class="function-desc">Add collision component (auto-adds collider and rigidbody)</div>
-            <div class="returns">Returns: LuaCollision component</div>
-        </div>
+            <h3>Collision System</h3>
+            
+            <div class="function">
+                <div class="function-name">Collision.Add(gameObject)</div>
+                <div class="function-desc">Add collision component (auto-adds collider and rigidbody)</div>
+                <div class="returns">Returns: LuaCollision component</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Collision.SetTag(collision, tag)</div>
-            <div class="function-desc">Filter collisions to only detect specific tag</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Collision.SetTag(collision, tag)</div>
+                <div class="function-desc">Filter collisions to only detect specific tag</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Collision.OnEnter(collision, callback)</div>
-            <div class="function-desc">Set callback when collision starts</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Collision.OnEnter(collision, callback)</div>
+                <div class="function-desc">Set callback when collision starts</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Collision.OnExit(collision, callback)</div>
-            <div class="function-desc">Set callback when collision ends</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Collision.OnExit(collision, callback)</div>
+                <div class="function-desc">Set callback when collision ends</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Collision.OnStay(collision, callback)</div>
-            <div class="function-desc">Set callback while collision continues</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Collision.OnStay(collision, callback)</div>
+                <div class="function-desc">Set callback while collision continues</div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Trigger Zone</div>
+            <div class="example">
+                <div class="example-title">Example: Trigger Zone</div>
 -- Create a trigger zone<br>
 local zone = GameObject.CreatePrimitive(Enum.Primitive.Cube)<br>
 zone.transform.position = Vector3.New(0, 0, 5)<br>
@@ -531,10 +617,10 @@ end)<br>
 Trigger.OnExit(trigger, function(other)<br>
 &nbsp;&nbsp;print("Player left zone!")<br>
 end)
-        </div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Physics Collision</div>
+            <div class="example">
+                <div class="example-title">Example: Physics Collision</div>
 -- Create a bouncing ball<br>
 local ball = GameObject.CreatePrimitive(Enum.Primitive.Sphere)<br>
 ball.transform.position = Vector3.New(0, 5, 0)<br>
@@ -545,37 +631,39 @@ Collision.OnEnter(collision, function(other)<br>
 &nbsp;&nbsp;print("Ball hit: " .. other.name)<br>
 &nbsp;&nbsp;Input.Vibrate(Enum.Hand.Right, 0.5, 0.1)<br>
 end)
-        </div>
-
-        <h2 id="physics">Physics & Raycasting</h2>
-        
-        <div class="function">
-            <div class="function-name">Physics.Raycast(origin, direction, maxDistance)</div>
-            <div class="function-desc">Cast a ray and detect hits</div>
-            <div class="params">
-                <span class="param">origin</span> - Vector3 starting point<br>
-                <span class="param">direction</span> - Vector3 direction (should be normalized)<br>
-                <span class="param">maxDistance</span> - Maximum ray distance
             </div>
-            <div class="returns">Returns: table with {hit, point, normal, distance, collider, gameObject}</div>
-        </div>
+        </section>
 
-        <div class="function">
-            <div class="function-name">Physics.SphereCast(origin, radius, direction, maxDistance)</div>
-            <div class="function-desc">Cast a sphere and detect hits</div>
-            <div class="returns">Returns: table with {hit, point, normal, distance, gameObject}</div>
-        </div>
+        <section id="physics" class="section">
+            <h2>Physics & Raycasting</h2>
+            
+            <div class="function">
+                <div class="function-name">Physics.Raycast(origin, direction, maxDistance)</div>
+                <div class="function-desc">Cast a ray and detect hits</div>
+                <div class="params">
+                    <span class="param">origin</span> - Vector3 starting point<br>
+                    <span class="param">direction</span> - Vector3 direction (should be normalized)<br>
+                    <span class="param">maxDistance</span> - Maximum ray distance
+                </div>
+                <div class="returns">Returns: table with {hit, point, normal, distance, collider, gameObject}</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Physics.OverlapSphere(position, radius)</div>
-            <div class="function-desc">Find all colliders within a sphere</div>
-            <div class="returns">Returns: Collider array</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Physics.SphereCast(origin, radius, direction, maxDistance)</div>
+                <div class="function-desc">Cast a sphere and detect hits</div>
+                <div class="returns">Returns: table with {hit, point, normal, distance, gameObject}</div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Raycast from Controller</div>
+            <div class="function">
+                <div class="function-name">Physics.OverlapSphere(position, radius)</div>
+                <div class="function-desc">Find all colliders within a sphere</div>
+                <div class="returns">Returns: Collider array</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Raycast from Controller</div>
 -- Cast a ray forward from right controller<br>
-local controllerPos = Vector3.New(1, 1.5, 0)<br>
+local controllerPos = Input.RightControllerPosition()<br>
 local forward = Vector3.Forward()<br>
 <br>
 local hit = Physics.Raycast(controllerPos, forward, 10)<br>
@@ -587,91 +675,93 @@ if hit.hit then<br>
 else<br>
 &nbsp;&nbsp;print("Nothing hit")<br>
 end
-        </div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Area Detection</div>
+            <div class="example">
+                <div class="example-title">Example: Area Detection</div>
 -- Find all objects near player<br>
-local playerPos = Vector3.New(0, 1, 0)<br>
+local playerPos = Input.HeadsetPosition()<br>
 local nearby = Physics.OverlapSphere(playerPos, 5.0)<br>
 <br>
 print("Found " .. #nearby .. " nearby objects")<br>
 for i, collider in ipairs(nearby) do<br>
 &nbsp;&nbsp;print("Object: " .. collider.gameObject.name)<br>
 end
-        </div>
+            </div>
+        </section>
 
-        <h2 id="vectors">Vectors & Math</h2>
-        
-        <h3>Vector3</h3>
-        
-        <div class="function">
-            <div class="function-name">Vector3.New(x, y, z)</div>
-            <div class="function-desc">Create a new Vector3</div>
-            <div class="returns">Returns: Vector3</div>
-        </div>
+        <section id="vectors" class="section">
+            <h2>Vectors & Math</h2>
+            
+            <h3>Vector3</h3>
+            
+            <div class="function">
+                <div class="function-name">Vector3.New(x, y, z)</div>
+                <div class="function-desc">Create a new Vector3</div>
+                <div class="returns">Returns: Vector3</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Vector3.Distance(a, b)</div>
-            <div class="function-desc">Calculate distance between two points</div>
-            <div class="returns">Returns: float</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Vector3.Distance(a, b)</div>
+                <div class="function-desc">Calculate distance between two points</div>
+                <div class="returns">Returns: float</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Vector3.Lerp(a, b, t)</div>
-            <div class="function-desc">Linear interpolation between two vectors</div>
-            <div class="params"><span class="param">t</span> - 0.0 to 1.0</div>
-            <div class="returns">Returns: Vector3</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Vector3.Lerp(a, b, t)</div>
+                <div class="function-desc">Linear interpolation between two vectors</div>
+                <div class="params"><span class="param">t</span> - 0.0 to 1.0</div>
+                <div class="returns">Returns: Vector3</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Vector3.Zero() / One() / Up() / Down() / Left() / Right() / Forward() / Back()</div>
-            <div class="function-desc">Static vector constants</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Vector3.Zero() / One() / Up() / Down() / Left() / Right() / Forward() / Back()</div>
+                <div class="function-desc">Static vector constants</div>
+            </div>
 
-        <h3>Vector2</h3>
-        
-        <div class="function">
-            <div class="function-name">Vector2.New(x, y)</div>
-            <div class="function-desc">Create a new Vector2</div>
-        </div>
+            <h3>Vector2</h3>
+            
+            <div class="function">
+                <div class="function-name">Vector2.New(x, y)</div>
+                <div class="function-desc">Create a new Vector2</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Vector2.Distance(a, b)</div>
-            <div class="function-desc">Calculate distance between two 2D points</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Vector2.Distance(a, b)</div>
+                <div class="function-desc">Calculate distance between two 2D points</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Vector2.Lerp(a, b, t)</div>
-            <div class="function-desc">Linear interpolation</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Vector2.Lerp(a, b, t)</div>
+                <div class="function-desc">Linear interpolation</div>
+            </div>
 
-        <h3>Color</h3>
-        
-        <div class="function">
-            <div class="function-name">Color.New(r, g, b, a)</div>
-            <div class="function-desc">Create a color (values 0.0 to 1.0)</div>
-        </div>
+            <h3>Color</h3>
+            
+            <div class="function">
+                <div class="function-name">Color.New(r, g, b, a)</div>
+                <div class="function-desc">Create a color (values 0.0 to 1.0)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Color.Red() / Green() / Blue() / White() / Black() / Yellow() / Cyan() / Magenta()</div>
-            <div class="function-desc">Color presets</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Color.Red() / Green() / Blue() / White() / Black() / Yellow() / Cyan() / Magenta()</div>
+                <div class="function-desc">Color presets</div>
+            </div>
 
-        <h3>Random</h3>
-        
-        <div class="function">
-            <div class="function-name">Random.Range(min, max)</div>
-            <div class="function-desc">Random float between min and max</div>
-        </div>
+            <h3>Random</h3>
+            
+            <div class="function">
+                <div class="function-name">Random.Range(min, max)</div>
+                <div class="function-desc">Random float between min and max</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Random.RangeInt(min, max)</div>
-            <div class="function-desc">Random integer between min and max (exclusive)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Random.RangeInt(min, max)</div>
+                <div class="function-desc">Random integer between min and max (exclusive)</div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Vector Math</div>
+            <div class="example">
+                <div class="example-title">Example: Vector Math</div>
 local pos1 = Vector3.New(0, 0, 0)<br>
 local pos2 = Vector3.New(5, 0, 5)<br>
 <br>
@@ -688,49 +778,51 @@ local randomPos = Vector3.New(<br>
 &nbsp;&nbsp;Random.Range(0, 5),<br>
 &nbsp;&nbsp;Random.Range(-10, 10)<br>
 )
-        </div>
+            </div>
+        </section>
 
-        <h2 id="time">Time & Coroutines</h2>
-        
-        <div class="function">
-            <div class="function-name">Time.time()</div>
-            <div class="function-desc">Get time since game started</div>
-            <div class="returns">Returns: float (seconds)</div>
-        </div>
+        <section id="time" class="section">
+            <h2>Time & Coroutines</h2>
+            
+            <div class="function">
+                <div class="function-name">Time.time()</div>
+                <div class="function-desc">Get time since game started</div>
+                <div class="returns">Returns: float (seconds)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Time.deltaTime()</div>
-            <div class="function-desc">Get time since last frame</div>
-            <div class="returns">Returns: float (seconds)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Time.deltaTime()</div>
+                <div class="function-desc">Get time since last frame</div>
+                <div class="returns">Returns: float (seconds)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Time.timeScale()</div>
-            <div class="function-desc">Get current time scale</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Time.timeScale()</div>
+                <div class="function-desc">Get current time scale</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">Time.SetTimeScale(scale)</div>
-            <div class="function-desc">Set game speed (1.0 = normal, 0.5 = half speed, 2.0 = double speed)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">Time.SetTimeScale(scale)</div>
+                <div class="function-desc">Set game speed (1.0 = normal, 0.5 = half speed, 2.0 = double speed)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">wait(seconds)</div>
-            <div class="function-desc">Pause execution for specified time (use in coroutines)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">wait(seconds)</div>
+                <div class="function-desc">Pause execution for specified time (use in coroutines)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">StartCoroutine(name, function)</div>
-            <div class="function-desc">Start a named coroutine (can be stopped later)</div>
-        </div>
+            <div class="function">
+                <div class="function-name">StartCoroutine(name, function)</div>
+                <div class="function-desc">Start a named coroutine (can be stopped later)</div>
+            </div>
 
-        <div class="function">
-            <div class="function-name">StopCoroutine(name)</div>
-            <div class="function-desc">Stop a running coroutine by name</div>
-        </div>
+            <div class="function">
+                <div class="function-name">StopCoroutine(name)</div>
+                <div class="function-desc">Stop a running coroutine by name</div>
+            </div>
 
-        <div class="example">
-            <div class="example-title">-- Example: Coroutine Timer</div>
+            <div class="example">
+                <div class="example-title">Example: Coroutine Timer</div>
 StartCoroutine("countdown", function()<br>
 &nbsp;&nbsp;for i = 5, 1, -1 do<br>
 &nbsp;&nbsp;&nbsp;&nbsp;print("Countdown: " .. i)<br>
@@ -741,6 +833,519 @@ end)<br>
 <br>
 -- Stop it early if needed<br>
 -- StopCoroutine("countdown")
-        </div>
-    </body>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Slow Motion</div>
+-- Activate slow motion<br>
+Time.SetTimeScale(0.5)<br>
+<br>
+-- After 3 seconds, return to normal<br>
+StartCoroutine("slowmo", function()<br>
+&nbsp;&nbsp;wait(3.0)<br>
+&nbsp;&nbsp;Time.SetTimeScale(1.0)<br>
+end)
+            </div>
+        </section>
+
+        <section id="networking" class="section">
+            <h2>Networking (Photon)</h2>
+            
+            <div class="note">
+                <div class="note-title">Multiplayer RPCs</div>
+                The networking system uses Photon's RaiseEvent system. Each RPC needs a unique ID between 0-154.
+            </div>
+
+            <h3>RPC Management</h3>
+            
+            <div class="function">
+                <div class="function-name">EventManager.Register(name, id, callback)</div>
+                <div class="function-desc">Register a new RPC that can be called over the network</div>
+                <div class="params">
+                    <span class="param">name</span> - Unique RPC name<br>
+                    <span class="param">id</span> - Unique ID (0-154)<br>
+                    <span class="param">callback</span> - function(data) called when RPC is received
+                </div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">EventManager.Call(name, receivers, data)</div>
+                <div class="function-desc">Call an RPC across the network</div>
+                <div class="params">
+                    <span class="param">name</span> - RPC name to call<br>
+                    <span class="param">receivers</span> - Enum.Receivers.All, Others, or MasterClient<br>
+                    <span class="param">data</span> - Data to send (string, number, table, etc.)
+                </div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">EventManager.GetAvailableId()</div>
+                <div class="function-desc">Get the next available RPC ID</div>
+                <div class="returns">Returns: integer (or -1 if all slots taken)</div>
+            </div>
+
+            <h3>Game State</h3>
+            
+            <div class="function">
+                <div class="function-name">game.IsMasterClient()</div>
+                <div class="function-desc">Check if this client is the master client (host)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">game.IsRunning()</div>
+                <div class="function-desc">Check if the game is running (not in editor)</div>
+                <div class="returns">Returns: boolean</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Simple Multiplayer System</div>
+-- Register an RPC for spawning objects<br>
+EventManager.Register("SpawnCube", 1, function(data)<br>
+&nbsp;&nbsp;local pos = Vector3.New(data.x, data.y, data.z)<br>
+&nbsp;&nbsp;local cube = GameObject.CreatePrimitive(Enum.Primitive.Cube)<br>
+&nbsp;&nbsp;cube.transform.position = pos<br>
+&nbsp;&nbsp;print("Cube spawned at: " .. pos)<br>
+end)<br>
+<br>
+-- When A button pressed, spawn cube for everyone<br>
+if Input.AButtonDown() then<br>
+&nbsp;&nbsp;local spawnData = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x = Random.Range(-5, 5),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y = 2,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;z = Random.Range(-5, 5)<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;EventManager.Call("SpawnCube", Enum.Receivers.All, spawnData)<br>
+end
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Master Client Authority</div>
+-- Only master client can trigger events<br>
+if game.IsMasterClient() then<br>
+&nbsp;&nbsp;EventManager.Register("GameStart", 2, function(data)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Game starting!")<br>
+&nbsp;&nbsp;end)<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;-- Start game for all players<br>
+&nbsp;&nbsp;if Input.YButtonDown() then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;EventManager.Call("GameStart", Enum.Receivers.All, nil)<br>
+&nbsp;&nbsp;end<br>
+end
+            </div>
+        </section>
+
+        <section id="audio" class="section">
+            <h2>Audio</h2>
+            
+            <div class="note">
+                <div class="note-title">Audio Components</div>
+                Audio sources can play sounds in 3D space with distance attenuation and spatial audio.
+            </div>
+
+            <div class="function">
+                <div class="function-name">gameObject.AddComponent(AudioSource)</div>
+                <div class="function-desc">Add an audio source component to a GameObject</div>
+                <div class="returns">Returns: AudioSource</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.Play()</div>
+                <div class="function-desc">Play the audio clip</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.Stop()</div>
+                <div class="function-desc">Stop playing audio</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.Pause()</div>
+                <div class="function-desc">Pause audio playback</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.volume</div>
+                <div class="function-desc">Get or set volume (0.0 to 1.0)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.pitch</div>
+                <div class="function-desc">Get or set pitch (0.5 to 2.0, 1.0 is normal)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.loop</div>
+                <div class="function-desc">Get or set looping (boolean)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">audioSource.spatialBlend</div>
+                <div class="function-desc">Get or set 2D/3D blend (0.0 = 2D, 1.0 = 3D)</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: 3D Spatial Audio</div>
+-- Create a sound emitter in 3D space<br>
+local emitter = GameObject.New("SoundEmitter")<br>
+emitter.transform.position = Vector3.New(5, 1, 5)<br>
+<br>
+local audio = emitter.AddComponent(AudioSource)<br>
+audio.volume = 0.8<br>
+audio.spatialBlend = 1.0  -- Full 3D audio<br>
+audio.loop = true<br>
+audio.Play()
+            </div>
+        </section>
+
+        <section id="lighting" class="section">
+            <h2>Lighting</h2>
+            
+            <div class="function">
+                <div class="function-name">gameObject.AddComponent(Light)</div>
+                <div class="function-desc">Add a light component to a GameObject</div>
+                <div class="returns">Returns: Light</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">light.type</div>
+                <div class="function-desc">Light type: Enum.LightType.Spot, Point, Directional, or Area</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">light.color</div>
+                <div class="function-desc">Light color (Color)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">light.intensity</div>
+                <div class="function-desc">Light brightness (float)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">light.range</div>
+                <div class="function-desc">Light range for point and spot lights (float)</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">light.spotAngle</div>
+                <div class="function-desc">Spot light cone angle (0-180 degrees)</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Dynamic Lighting</div>
+-- Create a pulsing point light<br>
+local lightObj = GameObject.New("DynamicLight")<br>
+lightObj.transform.position = Vector3.New(0, 3, 0)<br>
+<br>
+local light = lightObj.AddComponent(Light)<br>
+light.type = Enum.LightType.Point<br>
+light.color = Color.New(1.0, 0.5, 0.0)  -- Orange<br>
+light.range = 10<br>
+<br>
+-- Pulse the light<br>
+StartCoroutine("pulse", function()<br>
+&nbsp;&nbsp;while true do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for i = 0, 20 do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;light.intensity = 1 + math.sin(Time.time() * 3)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wait(0.05)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;end<br>
+end)
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Flashlight</div>
+-- Attach spotlight to controller<br>
+local flashlight = GameObject.New("Flashlight")<br>
+local light = flashlight.AddComponent(Light)<br>
+light.type = Enum.LightType.Spot<br>
+light.color = Color.White()<br>
+light.intensity = 2<br>
+light.range = 15<br>
+light.spotAngle = 45<br>
+<br>
+-- Update position every frame<br>
+StartCoroutine("updateFlashlight", function()<br>
+&nbsp;&nbsp;while true do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flashlight.transform.position = Input.RightControllerPosition()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flashlight.transform.rotation = Input.RightControllerRotation()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wait(0)<br>
+&nbsp;&nbsp;end<br>
+end)
+            </div>
+        </section>
+
+        <section id="particles" class="section">
+            <h2>Particles</h2>
+            
+            <div class="function">
+                <div class="function-name">gameObject.AddComponent(ParticleSystem)</div>
+                <div class="function-desc">Add a particle system component</div>
+                <div class="returns">Returns: ParticleSystem</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">particleSystem.Play()</div>
+                <div class="function-desc">Start emitting particles</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">particleSystem.Stop()</div>
+                <div class="function-desc">Stop emitting particles</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">particleSystem.Pause()</div>
+                <div class="function-desc">Pause particle emission</div>
+            </div>
+
+            <div class="function">
+                <div class="function-name">particleSystem.Clear()</div>
+                <div class="function-desc">Remove all existing particles</div>
+            </div>
+
+            <div class="example">
+                <div class="example-title">Example: Particle Effects</div>
+-- Create explosion effect<br>
+local explosion = GameObject.New("Explosion")<br>
+explosion.transform.position = Vector3.New(0, 1, 5)<br>
+<br>
+local particles = explosion.AddComponent(ParticleSystem)<br>
+particles.Play()<br>
+<br>
+-- Destroy after 2 seconds<br>
+StartCoroutine("cleanupExplosion", function()<br>
+&nbsp;&nbsp;wait(2.0)<br>
+&nbsp;&nbsp;GameObject.Destroy(explosion)<br>
+end)
+            </div>
+        </section>
+
+        <section id="examples" class="section">
+            <h2>Complete Examples</h2>
+            
+            <h3>Example 1: VR Grab System</h3>
+            
+            <div class="example">
+                <div class="example-title">VR Object Grabbing</div>
+-- Track grabbed object<br>
+local grabbedObject = nil<br>
+local grabOffset = Vector3.Zero()<br>
+<br>
+-- Check for grab each frame<br>
+StartCoroutine("grabUpdate", function()<br>
+&nbsp;&nbsp;while true do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;local gripValue = Input.RightGrip()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if gripValue > 0.7 and grabbedObject == nil then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Cast ray from controller<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local controllerPos = Input.RightControllerPosition()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local forward = Vector3.Forward()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local hit = Physics.Raycast(controllerPos, forward, 2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if hit.hit then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grabbedObject = hit.gameObject<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grabOffset = grabbedObject.transform.position - controllerPos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input.Vibrate(Enum.Hand.Right, 0.3, 0.1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elseif gripValue < 0.3 and grabbedObject ~= nil then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Release object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grabbedObject = nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input.Vibrate(Enum.Hand.Right, 0.2, 0.05)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-- Update grabbed object position<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if grabbedObject ~= nil then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local controllerPos = Input.RightControllerPosition()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grabbedObject.transform.position = controllerPos + grabOffset<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wait(0)<br>
+&nbsp;&nbsp;end<br>
+end)
+            </div>
+
+            <h3>Example 2: Target Shooting Gallery</h3>
+            
+            <div class="example">
+                <div class="example-title">Shooting Gallery with Score</div>
+local score = 0<br>
+local targets = {}<br>
+<br>
+-- Spawn targets<br>
+for i = 1, 5 do<br>
+&nbsp;&nbsp;local target = GameObject.CreatePrimitive(Enum.Primitive.Sphere)<br>
+&nbsp;&nbsp;target.transform.position = Vector3.New(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Random.Range(-5, 5),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Random.Range(1, 3),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;10<br>
+&nbsp;&nbsp;)<br>
+&nbsp;&nbsp;target.transform.localScale = Vector3.New(0.5, 0.5, 0.5)<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;-- Make target red<br>
+&nbsp;&nbsp;local renderer = target.GetComponent(Renderer)<br>
+&nbsp;&nbsp;renderer.material.color = Color.Red()<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;table.insert(targets, target)<br>
+end<br>
+<br>
+-- Shooting logic<br>
+StartCoroutine("shootingLoop", function()<br>
+&nbsp;&nbsp;while true do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if Input.RightTrigger() > 0.9 then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local pos = Input.RightControllerPosition()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local rot = Input.RightControllerRotation()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local forward = Vector3.Forward()  -- Transform by rotation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local hit = Physics.Raycast(pos, forward, 50)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if hit.hit then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Check if we hit a target<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i, target in ipairs(targets) do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if target == hit.gameObject then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score = score + 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Hit! Score: " .. score)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GameObject.Destroy(target)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;table.remove(targets, i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input.Vibrate(Enum.Hand.Right, 1.0, 0.2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wait(0.2)  -- Fire rate delay<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wait(0)<br>
+&nbsp;&nbsp;end<br>
+end)
+            </div>
+
+            <h3>Example 3: Multiplayer Spawner</h3>
+            
+            <div class="example">
+                <div class="example-title">Synchronized Object Spawning</div>
+-- Register RPC for spawning<br>
+EventManager.Register("NetworkSpawn", 10, function(data)<br>
+&nbsp;&nbsp;local obj = GameObject.CreatePrimitive(data.type)<br>
+&nbsp;&nbsp;obj.transform.position = Vector3.New(data.x, data.y, data.z)<br>
+&nbsp;&nbsp;obj.transform.localScale = Vector3.New(data.scale, data.scale, data.scale)<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;local renderer = obj.GetComponent(Renderer)<br>
+&nbsp;&nbsp;renderer.material.color = Color.New(data.r, data.g, data.b)<br>
+end)<br>
+<br>
+-- Spawn objects when button pressed<br>
+StartCoroutine("spawnLoop", function()<br>
+&nbsp;&nbsp;while true do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if Input.AButtonDown() then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local spawnData = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type = Enum.Primitive.Cube,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = Random.Range(-5, 5),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = 5,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = Random.Range(-5, 5),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scale = Random.Range(0.5, 2.0),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r = Random.Range(0, 1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g = Random.Range(0, 1),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = Random.Range(0, 1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EventManager.Call("NetworkSpawn", Enum.Receivers.All, spawnData)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wait(0)<br>
+&nbsp;&nbsp;end<br>
+end)
+            </div>
+
+            <h3>Example 4: Teleportation System</h3>
+            
+            <div class="example">
+                <div class="example-title">VR Teleport Mechanic</div>
+local teleportMarker = GameObject.CreatePrimitive(Enum.Primitive.Cylinder)<br>
+teleportMarker.transform.localScale = Vector3.New(1, 0.1, 1)<br>
+teleportMarker.SetActive(false)<br>
+<br>
+local renderer = teleportMarker.GetComponent(Renderer)<br>
+renderer.material.color = Color.New(0, 1, 0, 0.5)  -- Green transparent<br>
+<br>
+local player = GameObject.Find("Player")<br>
+<br>
+StartCoroutine("teleportSystem", function()<br>
+&nbsp;&nbsp;while true do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;local stick = Input.LeftStick()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if stick.y > 0.8 then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Show teleport marker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local controllerPos = Input.LeftControllerPosition()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local forward = Vector3.Forward()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;local hit = Physics.Raycast(controllerPos, forward, 10)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if hit.hit then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;teleportMarker.SetActive(true)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;teleportMarker.transform.position = hit.point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Teleport on release<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if teleportMarker.activeSelf then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.transform.position = teleportMarker.transform.position<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;teleportMarker.SetActive(false)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input.Vibrate(Enum.Hand.Left, 0.5, 0.1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;wait(0)<br>
+&nbsp;&nbsp;end<br>
+end)
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Highlight active section on scroll
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        function highlightNav() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        
+        document.querySelector('.main-content').addEventListener('scroll', highlightNav);
+        
+        // Set initial active state
+        if (navItems.length > 0) {
+            navItems[0].classList.add('active');
+        }
+    </script>
+</body>
 </html>
